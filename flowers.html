@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/flowers.css">
+
+</head>
+<body>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="index.html">Home</a>
+  <a href="index.html">Portfolio</a>
+  <a href="portrait.html">Contact</a>
+</div>
+
+<div id="main">
+  <button class="openbtn" style="font-weight: bold;" onclick="openNav()">☰</button>  
+</div>
+<div style="height:400px; color:white; text-align:center; padding:55px 100px; font-size:50px">
+<h1 style="font-family: verdana"><p style="font-size:30px"> FLOWERS </h1>
+  <div id="card-area">
+    <div class="wrapper">
+      <div class="box-area">
+        <div class="box">
+          <img src="PHOTO/sun1.jpg" alt="">
+          <div class="overlay">
+            <h3> Sunflowers: Positivity and Abundance </h3>
+            <p>Sunflowers are a cheerful choice, symbolizing optimism, happiness, and vitality.</p>
+           
+          </div>
+        </div>
+        <div class="box">
+          <img src="PHOTO/chrysanthemum.jpg" alt="">
+          <div class="overlay">
+            <h3> Chrysanthemums: <br>
+              Longevity and Joy</h3>
+            <p>A traditional flower in many cultures, chrysanthemums are associated with happiness and long life.</p>
+        
+          </div>
+        </div>
+        <div class="box">
+          <img src="PHOTO/pink-amarylis.jpg" alt="">
+          <div class="overlay">
+            <h3> Amaryllis: Beauty and Strength </h3>
+            <p>Known for their large, trumpet-like blooms, amaryllis flowers signify success and beauty.</p>
+      
+          </div>
+        </div>
+        </div>
+      </div>
+    </div> 
+ 
+    <script>
+      function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+        document.getElementById("main").style.marginLeft = "250px";
+      }
+      
+      function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft= "0";
+      }
+      </script>
+         
+</body>
+</html>
