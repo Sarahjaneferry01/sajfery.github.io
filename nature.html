@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="CSS/nature.css">
+    <title></title>
+
+</head>
+<body>
+ 
+<div class="parallax"></div>
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" style="font-weight:bold;font-size:30px;" onclick="closeNav()">x</a>
+  <a href="index.html">HOME</a>
+  <a href="wildlife.html">WILDLIFE</a>
+  <a href="portrait.html">PORTRAIT</a>
+  <a href="fashion.html">FASHION</a>
+  <a href="nature.html">NATURE</a>
+</div>
+
+<button class="openbtn" style="font-weight:bold;font-size:30px;" onclick="openNav()">☰</button> 
+ <div class="main" id="NATURE" style="color:whitesmoke; text-align:center; padding:20px; font-size:20px">
+  <h2>NATURE</h2><br>
+  
+      <img src="PHOTO/canada-nature.jpg" style="width:250px" height="250px" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">&nbsp;
+ 
+      <img src="PHOTO/italy-nature.jpg" style="width:250px" height="250px" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">&nbsp;
+
+    <img src="PHOTO/korean nature.jpg" style="width:250px" height="250px" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">&nbsp;
+
+    <img src="PHOTO/Lavender-Flower-Field-New-Zealand-Nature-Scenery.jpg" style="width:250px" height="250px" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">&nbsp;
+
+    <img src="PHOTO/switzerland nature.jpg" style="width:250px" height="250px" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">&nbsp;
+
+ </div>
+
+  <div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+  
+      <div class="mySlides">
+        <div class="numbertext"></div>
+        <img src="PHOTO/canada-nature.jpg" style="width:100%">
+      </div>
+      <div class="mySlides">
+        <div class="numbertext"></div>
+        <img src="PHOTO/italy-nature.jpg" style="width:100%">
+      </div>
+  
+      <div class="mySlides">
+        <div class="numbertext"></div>
+        <img src="PHOTO/korean nature.jpg" style="width:100%">
+      </div>
+
+      
+      <div class="mySlides">
+        <div class="numbertext"></div>
+        <img src="PHOTO/Lavender-Flower-Field-New-Zealand-Nature-Scenery.jpg" style="width:100%">
+      </div>
+
+      
+      <div class="mySlides">
+        <div class="numbertext"></div>
+        <img src="PHOTO/switzerland nature.jpg" style="width:100%">
+      </div>
+      
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+  
+      <div class="caption-container">
+        <p id="caption"></p>
+      </div>
+    
+      <script>
+        function openModal() {
+          document.getElementById("myModal").style.display = "block";
+        }
+        
+        function closeModal() {
+          document.getElementById("myModal").style.display = "none";
+        }
+        
+        var slideIndex = 1;
+        showSlides(slideIndex);
+        
+        function plusSlides(n) {
+          showSlides(slideIndex += n);
+        }
+        
+        function currentSlide(n) {
+          showSlides(slideIndex = n);
+        }
+        
+        function showSlides(n) {
+          var i;
+          var slides = document.getElementsByClassName("mySlides");
+          var dots = document.getElementsByClassName("demo");
+          var captionText = document.getElementById("caption");
+          if (n > slides.length) {slideIndex = 1}
+          if (n < 1) {slideIndex = slides.length}
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          for (i = 0; i < dots.length; i++) {
+              dots[i].className = dots[i].className.replace(" active", "");
+          }
+          slides[slideIndex-1].style.display = "block";
+          dots[slideIndex-1].className += " active";
+          captionText.innerHTML = dots[slideIndex-1].alt;
+        }
+        function openNav() {
+  document.getElementById("mySidebar").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "250px";
+}
+
+function closeNav() {
+  document.getElementById("mySidebar").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>    
+    </body>
+</html>
